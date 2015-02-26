@@ -1,0 +1,25 @@
+{
+  "name": "jsxon",
+  "version": "0.0.0",
+  "description": "JSX object notation - converts from simple javascript objects to JSX",
+  "author": "atom smith <@re5et>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/re5et/jsxon"
+  },
+  "bugs": {
+    "url": "https://github.com/re5et/jsxon/issues"
+  },
+  "keywords": [
+    "react",
+    "jsx",
+    "json"
+  ],
+  "dependencies": {
+    "react": "*",
+  },
+  "devDependencies": {
+  },
+  "license": "MIT"
+}
