@@ -1,3 +1,5 @@
+var React = require('react');
+
 var defaultElementType = "div";
 
 var jsxon = function(obj, rootElement){
@@ -27,4 +29,4 @@ var jsxon = function(obj, rootElement){
   }
 };
 
-return jsxon;
+module.exports = jsxon;
