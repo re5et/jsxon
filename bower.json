@@ -1,0 +1,27 @@
+{
+  "name": "jsxon",
+  "version": "0.0.0",
+  "homepage": "https://github.com/re5et/jsxon",
+  "authors": [
+    "re5et <re5etsmyth@gmail.com>"
+  ],
+  "main": "index.amd.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "jsx",
+    "react"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.12.2"
+  }
+}
