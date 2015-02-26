@@ -17,7 +17,7 @@
     "json"
   ],
   "dependencies": {
-    "react": "*",
+    "react": "*"
   },
   "devDependencies": {
   },
