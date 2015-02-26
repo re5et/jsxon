@@ -1,13 +1,19 @@
-var React = require('react');
+var defaultElementType = "div";
 
 var jsxon = function(obj, rootElement){
   var props = {};
   for(var prop in obj){
-    if(prop != "el" && prop != "children" && prop != "text"){
+    if(prop != "el" && prop != "children" && prop != "text", prop != "defaultElementType"){
       props[prop] = obj[prop];
     }
   }
-  var element = React.createElement(obj.el, props, obj.text);
+  if(obj.defaultElementType){
+    elementType = obj.defaultElementType
+  }
+  else{
+    elementType = obj.el || defaultElementType
+  }
+  var element = React.createElement(elementType, props, obj.text);
   if(!rootElement){
     rootElement = element;
   }
@@ -21,4 +27,4 @@ var jsxon = function(obj, rootElement){
   }
 };
 
-module.exports = jsxon;
+return jsxon;
