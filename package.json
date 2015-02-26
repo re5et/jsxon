@@ -1,9 +1,9 @@
 {
   "name": "jsxon",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "JSX object notation - converts from simple javascript objects to JSX",
   "author": "atom smith <@re5et>",
-  "main": "index.node.js",
+  "main": "jsxon.cjs.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/re5et/jsxon"
