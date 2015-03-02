@@ -1,12 +1,15 @@
 define(['react'], function(React){
 
+  var specialProperties = ['type', 'children', 'text', 'defaultType'];
+
   var jsxon = function(obj, defaultType){
 
-    var props = {};
     defaultType = defaultType || "div";
 
+    var props = {};
+
     for(var prop in obj){
-      if(prop != "type" && prop != "children" && prop != "text", prop != "defaultType"){
+      if(specialProperties.indexOf(prop) == -1){
         props[prop] = obj[prop];
       }
     }
@@ -22,16 +25,13 @@ define(['react'], function(React){
 
     var elementType = obj.type || obj.defaultType || defaultType;
 
-    var element = React.createElement(elementType, props, obj.text);
-
-    if(obj.children){
-      element.props.children = obj.children.map(function(child){
+    if(obj.text || obj.children){
+      var children = obj.text || obj.children.map(function(child){
         return jsxon(child, defaultType);
       });
-      return element;
-    } else {
-      return element;
     }
+
+    return React.createElement(elementType, props, children);
   };
 
   return jsxon;
