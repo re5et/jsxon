@@ -20,6 +20,9 @@
     "react": "*"
   },
   "devDependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-mocha-chai-sinon": "*"
   },
   "license": "MIT"
 }
