@@ -1,6 +1,6 @@
 {
   "name": "jsxon",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "JSX object notation - converts from simple javascript objects to JSX",
   "author": "atom smith <@re5et>",
   "main": "jsxon.cjs.js",
