@@ -6,6 +6,10 @@ var jsxon = function(obj, defaultType){
 
   defaultType = defaultType || "div";
 
+  if(obj.className && obj.className.join){
+    obj.className = obj.className.join(' ');
+  }
+
   var props = {};
 
   for(var prop in obj){

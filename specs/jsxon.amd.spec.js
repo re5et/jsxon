@@ -41,6 +41,20 @@ describe('jsxon', function(){
 
   });
 
+  describe('className is an array', function(){
+
+    beforeEach(function(){
+      result = jsxon({
+        className: ['foo', 'bar', 'baz']
+      });
+    });
+
+    it('should join the className array for you', function(){
+      expect(result.props.className).to.eql('foo bar baz');
+    });
+
+  });
+
   describe('element with children', function(){
 
     beforeEach(function(){
