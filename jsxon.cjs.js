@@ -1,6 +1,6 @@
 var React = require('react');
 
-var specialProperties = ['type', 'children', 'text', 'defaultType'];
+var specialProperties = ['el', 'children', 'text', 'defaultType'];
 
 var jsxon = function(obj, defaultType){
 
@@ -27,7 +27,7 @@ var jsxon = function(obj, defaultType){
     defaultType = obj.defaultType;
   }
 
-  var elementType = obj.type || obj.defaultType || defaultType;
+  var elementType = obj.el || obj.defaultType || defaultType;
 
   if(obj.text || obj.children){
     var children = obj.text || obj.children.map(function(child){
