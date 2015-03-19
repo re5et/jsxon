@@ -17,7 +17,7 @@ js, and React.createElement is too much of a hassle.
 
 ```javascript
 return jsxon({
-    type: 'ul',
+    el: 'ul',
     defaultElement: 'li'
     children: [0,1,2,3,4].map(function(i){
         return {
@@ -44,7 +44,7 @@ return (<ul>
 
 # All keys are passed on to react except the following special keys:
 
-* type: the element type to use (div / ul / li / etc)
+* el: the element type to use (div / ul / li / etc)
 * text: key to specify text for element (instead of children)
 * children: key to specify the child nodes of an element
 * defaultType: set the default type of element to use for type
@@ -62,11 +62,11 @@ var lists = ['fooList', 'barList', 'bazList'];
 var items = [0,1,2,3];
 
 return jsxon({
-  type: 'ol',
+  el: 'ol',
   defaultElement: 'li',
   children: lists.sort.map(function(list){
     return {
-            type: 'ul'
+            el: 'ul'
       children: items.map(function(item){
                 return {
                     defaultElement: 'span'
