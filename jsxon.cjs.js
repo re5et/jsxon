@@ -1,10 +1,10 @@
 var React = require('react');
 
-var specialProperties = ['el', 'children', 'text', 'defaultType'];
+var specialProperties = ['el', 'children', 'text', 'defaultEl'];
 
-var jsxon = function(obj, defaultType){
+var jsxon = function(obj, defaultEl){
 
-  defaultType = defaultType || "div";
+  defaultEl = defaultEl || "div";
 
   if(obj.className && obj.className.join){
     obj.className = obj.className.join(' ');
@@ -23,15 +23,15 @@ var jsxon = function(obj, defaultType){
     delete obj.children;
   }
 
-  if(obj.defaultType){
-    defaultType = obj.defaultType;
+  if(obj.defaultEl){
+    defaultEl = obj.defaultEl;
   }
 
-  var elementType = obj.el || obj.defaultType || defaultType;
+  var elementType = obj.el || obj.defaultEl || defaultEl;
 
   if(obj.text || obj.children){
     var children = obj.text || obj.children.map(function(child){
-      return jsxon(child, defaultType);
+      return jsxon(child, defaultEl);
     });
   }
 
