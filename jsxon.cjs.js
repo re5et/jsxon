@@ -4,12 +4,6 @@ var specialProperties = ['el', 'children', 'text', 'defaultEl'];
 
 var jsxon = function(obj, defaultEl){
 
-  if(typeof(obj) == "function"){
-    return React.createElement(obj);
-  }
-
-  defaultEl = defaultEl || "div";
-
   if(obj.className && obj.className.join){
     obj.className = obj.className.join(' ');
   }
@@ -22,10 +16,16 @@ var jsxon = function(obj, defaultEl){
     }
   }
 
+  if(typeof(obj) == "function"){
+    return React.createElement(obj, props);
+  }
+
   if(typeof(obj.children) == "string"){
     obj.text = obj.children;
     delete obj.children;
   }
+
+  defaultEl = defaultEl || "div";
 
   if(obj.defaultEl){
     defaultEl = obj.defaultEl;
