@@ -4,6 +4,10 @@ var specialProperties = ['el', 'children', 'text', 'defaultEl'];
 
 var jsxon = function(obj, defaultEl){
 
+  if(typeof(obj) == "function"){
+    return React.createElement(obj);
+  }
+
   defaultEl = defaultEl || "div";
 
   if(obj.className && obj.className.join){

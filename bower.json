@@ -1,6 +1,6 @@
-{
+a{
   "name": "jsxon",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "homepage": "https://github.com/re5et/jsxon",
   "authors": [
     "re5et <re5etsmyth@gmail.com>"
@@ -22,6 +22,6 @@
     "tests"
   ],
   "dependencies": {
-    "react": "*"
+    "react": "~0.12.2"
   }
 }
