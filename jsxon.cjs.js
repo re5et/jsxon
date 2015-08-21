@@ -3,6 +3,9 @@ var React = require('react');
 var specialProperties = ['el', 'children', 'text', 'defaultEl'];
 
 var jsxon = function(obj, defaultEl){
+  if(!obj){
+    return undefined;
+  }
 
   if(obj.className && obj.className.join){
     obj.className = obj.className.join(' ');
