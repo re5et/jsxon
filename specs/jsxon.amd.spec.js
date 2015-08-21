@@ -159,4 +159,16 @@ describe('jsxon', function(){
 
   });
 
+  context('when the object is undefined', function(){
+
+    beforeEach(function(){
+      result = jsxon(undefined);
+    });
+
+    it('returns undefined', function(){
+      expect(result).to.eql(undefined);
+    });
+
+  });
+
 });
